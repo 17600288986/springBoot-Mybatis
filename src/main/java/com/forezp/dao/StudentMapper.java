@@ -10,4 +10,5 @@ public interface StudentMapper {
 
     @Select("select * from t_student where id=#{id}")
     Student findStudentsById(String id);
+
 }

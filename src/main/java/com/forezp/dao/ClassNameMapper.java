@@ -11,4 +11,5 @@ public interface  ClassNameMapper {
 
     @Select("select * from t_class_name where id= #{id}")
     ClassName findClassById( String id);
+
 }

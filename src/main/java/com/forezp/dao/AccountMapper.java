@@ -26,4 +26,5 @@ public interface AccountMapper {
 
     @Select("select id, name as name, money as money from account")
     List<Account> findAccountList();
+
 }
