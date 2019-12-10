@@ -12,8 +12,8 @@ import java.util.List;
 
 public interface AccountMapper {
 
-    @Insert("insert into account(name, money) values(#{name}, #{money})")
-    int add(@Param("name") String name, @Param("money") double money);
+//    @Insert("insert into account(name, money) values(#{name}, #{money})")
+//    int add(@Param("name") String name, @Param("money") double money);
 
     @Update("update account set name = #{name}, money = #{money} where id = #{id}")
     int update(@Param("name") String name, @Param("money") BigDecimal money, @Param("id") int  id);
