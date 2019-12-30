@@ -27,6 +27,7 @@ public class ClassController {
             result= resultUtil.setData(className);
         } catch (Exception e) {
             e.printStackTrace();
+
             result=resultUtil.setErrorMsg("查询班级失败");
         }
 
