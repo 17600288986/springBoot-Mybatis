@@ -11,14 +11,14 @@ import java.util.Map;
  * @Description: pdf数据实体
  * @Param:
  * @Return:
- * @Author: Jiangsy
+ * @Author: gxw
  * @Date: 2019/9/19
-**/
+ **/
 @Data
-public class PdfData implements Serializable{
+public class PdfData implements Serializable {
     private JSONArray classNum;
     private String saveUrl;//pdf保存路径
-    private Map<String,String> dataMap;//柱状图等相关数值
+    private Map<String, String> dataMap;//柱状图等相关数值
     private String ldtUrl;//雷达图路径
     private String zztUrl;//柱状图路径
     private String convertJsPath;//phantomjs转echars的js路径
@@ -30,8 +30,8 @@ public class PdfData implements Serializable{
 
     }
 
-    public PdfData(JSONArray classNum,String saveUrl, Map<String, String> dataMap, String ldtUrl, String zztUrl, String convertJsPath, String dataPath, String phantomjsPath,String logoPath) {
-        this.classNum=classNum;
+    public PdfData(JSONArray classNum, String saveUrl, Map<String, String> dataMap, String ldtUrl, String zztUrl, String convertJsPath, String dataPath, String phantomjsPath, String logoPath) {
+        this.classNum = classNum;
         this.saveUrl = saveUrl;
         this.dataMap = dataMap;
         this.ldtUrl = ldtUrl;

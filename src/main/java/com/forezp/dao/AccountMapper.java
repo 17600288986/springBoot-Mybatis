@@ -17,10 +17,10 @@ public interface AccountMapper {
 
 
     @Update("update account set name = #{name}, money = #{money} where id = #{id}")
-    int update(@Param("name") String name, @Param("money") BigDecimal money, @Param("id") int  id);
+    int update(@Param("name") String name, @Param("money") BigDecimal money, @Param("id") int id);
 
     @Delete("delete from account where id = #{id}")
-    int delete(@Param("id")int id);
+    int delete(@Param("id") int id);
 
     @Select("select id, name as name, money as money from account where id = #{id}")
     Account findAccount(@Param("id") int id);

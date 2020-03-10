@@ -17,8 +17,9 @@ public class StudentController {
 
     @Autowired
     StudentsService studentsService;
+
     @RequestMapping(value = "/findStudentsById", method = RequestMethod.GET)
-    public Student findClassByid(String id){
+    public Student findClassByid(String id) {
         Student student = studentsService.findStudentsById(id);
         return student;
     }

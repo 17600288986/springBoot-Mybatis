@@ -7,10 +7,10 @@ import com.itextpdf.text.pdf.*;
  * @MethodName: pdf页码
  * @Param:
  * @Return:
- * @Author: Jiangsy
+ * @Author: gxw
  * @Date: 2019/9/3
-**/
-public class TableFooter extends PdfPageEventHelper{
+ **/
+public class TableFooter extends PdfPageEventHelper {
 
 
     String header;
@@ -27,7 +27,7 @@ public class TableFooter extends PdfPageEventHelper{
     public void onEndPage(PdfWriter writer, Document document) {
         PdfPTable table = new PdfPTable(3);
         try {
-            table.setWidths(new int[] { 24, 24, 2 });
+            table.setWidths(new int[]{24, 24, 2});
             table.setTotalWidth(505);
             table.setLockedWidth(true);
             table.getDefaultCell().setFixedHeight(20);

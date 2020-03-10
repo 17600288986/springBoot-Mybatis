@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/class")
 public class ClassController {
@@ -19,19 +21,20 @@ public class ClassController {
 
 
     @RequestMapping(value = "/findClassByid", method = RequestMethod.GET)
-    public Result findClassByid(String id){
+    public Result findClassByid(String id) {
         ResultUtil resultUtil = new ResultUtil<>();
         Result result;
         try {
-            ClassName className = classService.findClassByid(id);
-            result= resultUtil.setData(className);
+            Map<String, Object> className = classService.findClassByid(id);
+            result = resultUtil.setData(className);
         } catch (Exception e) {
             e.printStackTrace();
 
-            result=resultUtil.setErrorMsg("查询班级失败");
+            result = resultUtil.setErrorMsg("查询班级失败");
         }
 
         return result;
     }
+
 
 }

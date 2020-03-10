@@ -19,15 +19,19 @@ public class AccountService {
     public int add(String name, double money) {
         return accountMapper.add(name, money);
     }
+
     public int update(String name, BigDecimal money, int id) {
         return accountMapper.update(name, money, id);
     }
+
     public int delete(Integer id) {
         return accountMapper.delete(id);
     }
+
     public Account findAccount(int id) {
         return accountMapper.findAccount(id);
     }
+
     public List<Account> findAccountList() {
         return accountMapper.findAccountList();
     }

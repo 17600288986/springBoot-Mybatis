@@ -16,7 +16,7 @@ import java.io.FileOutputStream;
 public class PDFController {
 
     @RequestMapping(value = "/creatPdf", method = RequestMethod.POST)
-    public Result creatPdf()throws Exception {
+    public Result creatPdf() {
         ResultUtil resultUtil = new ResultUtil<>();
         Result result;
         try {

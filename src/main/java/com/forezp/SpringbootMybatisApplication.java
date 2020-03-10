@@ -12,8 +12,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 public class SpringbootMybatisApplication {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		SpringApplication.run(SpringbootMybatisApplication.class, args);
-	}
+        SpringApplication.run(SpringbootMybatisApplication.class, args);
+    }
 }

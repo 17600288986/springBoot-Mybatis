@@ -12,7 +12,7 @@ import java.util.List;
  * Created by fangzhipeng on 2017/4/20.
  */
 @RestController
-    @RequestMapping("/account")
+@RequestMapping("/account")
 public class AccountController {
 
     @Autowired
@@ -31,21 +31,21 @@ public class AccountController {
     @RequestMapping(value = "/update/{id}", method = RequestMethod.PUT)
     public String updateAccount(@PathVariable("id") int id, @RequestParam(value = "name", required = false) String name,
                                 @RequestParam(value = "money", required = false) BigDecimal money) {
-        int t= accountService.update(name,money,id);
-        if(t==1) {
+        int t = accountService.update(name, money, id);
+        if (t == 1) {
             return "success";
-        }else {
+        } else {
             return "fail";
         }
 
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public String delete(@PathVariable(value = "id")Integer id) {
-        int t= accountService.delete(id);
-        if(t==1) {
+    public String delete(@PathVariable(value = "id") Integer id) {
+        int t = accountService.delete(id);
+        if (t == 1) {
             return "success";
-        }else {
+        } else {
             return "fail";
         }
 
@@ -55,12 +55,12 @@ public class AccountController {
     public String postAccount(@RequestParam(value = "name") String name,
                               @RequestParam(value = "money") double money) {
 
-       int t= accountService.add(name,money);
-       if(t==1) {
-           return "success";
-       }else {
-           return "fail";
-       }
+        int t = accountService.add(name, money);
+        if (t == 1) {
+            return "success";
+        } else {
+            return "fail";
+        }
 
     }
 

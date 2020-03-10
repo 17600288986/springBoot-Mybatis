@@ -7,11 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class StudentsService  {
+public class StudentsService {
     @Autowired
     StudentMapper studentMapper;
 
-    public Student findStudentsById(String id){
+    public Student findStudentsById(String id) {
 
         return studentMapper.findStudentsById(id);
     }
